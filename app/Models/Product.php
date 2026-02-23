@@ -18,13 +18,6 @@ class Product extends Model
         'category',
     ];
 
-    protected function casts(): array
-    {
-        return [
-            'price' => 'decimal:2',
-        ];
-    }
-
     public function scopeSearch($query, $search)
     {
         return $query->where('name', 'like', "%{$search}%")
