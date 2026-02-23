@@ -12,7 +12,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->text('description');
-            $table->decimal('price', 12, 2);
+            $table->integer('price');
             $table->integer('stock')->default(0);
             $table->string('image')->nullable();
             $table->string('category');
